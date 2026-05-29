@@ -1,10 +1,179 @@
+```html
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Demo Web Page 1</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MovieFlix</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#000;
+    color:white;
+}
+
+.hero{
+    height:100vh;
+    background:url('https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=1600')
+    center/cover no-repeat;
+    position:relative;
+}
+
+.overlay{
+    background:rgba(0,0,0,0.7);
+    height:100%;
+    width:100%;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 50px;
+}
+
+.logo{
+    color:#e50914;
+    font-size:2rem;
+    font-weight:bold;
+}
+
+.btn{
+    background:#e50914;
+    color:white;
+    padding:10px 20px;
+    text-decoration:none;
+    border-radius:5px;
+}
+
+.hero-content{
+    text-align:center;
+    margin-top:180px;
+    padding:20px;
+}
+
+.hero-content h1{
+    font-size:3.5rem;
+    margin-bottom:20px;
+}
+
+.hero-content p{
+    font-size:1.3rem;
+    margin-bottom:30px;
+}
+
+.start-btn{
+    background:#e50914;
+    color:white;
+    padding:15px 30px;
+    text-decoration:none;
+    border-radius:5px;
+    font-size:1.1rem;
+}
+
+.movies{
+    padding:60px 30px;
+}
+
+.movies h2{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.movie-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.movie-card{
+    background:#111;
+    border-radius:10px;
+    overflow:hidden;
+    transition:0.3s;
+}
+
+.movie-card:hover{
+    transform:scale(1.05);
+}
+
+.movie-card img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+}
+
+.movie-card h3{
+    text-align:center;
+    padding:15px;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    background:#111;
+}
+</style>
 </head>
+
 <body>
-    <h1>Welcome to Demo Web Page 1</h1>
-    <p>This is my HTML-only landing page.</p>
+
+<section class="hero">
+<div class="overlay">
+
+<nav>
+<div class="logo">MovieFlix</div>
+<a href="#" class="btn">Sign In</a>
+</nav>
+
+<div class="hero-content">
+<h1>Unlimited Movies, TV Shows & More</h1>
+<p>Watch anywhere. Cancel anytime.</p>
+<a href="#" class="start-btn">Get Started</a>
+</div>
+
+</div>
+</section>
+
+<section class="movies">
+<h2>Popular Movies</h2>
+
+<div class="movie-grid">
+
+<div class="movie-card">
+<img src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?w=500">
+<h3>Action Movie</h3>
+</div>
+
+<div class="movie-card">
+<img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?w=500">
+<h3>Adventure Movie</h3>
+</div>
+
+<div class="movie-card">
+<img src="https://images.unsplash.com/photo-1440404653325-ab127d49abc1?w=500">
+<h3>Sci-Fi Movie</h3>
+</div>
+
+<div class="movie-card">
+<img src="https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=500">
+<h3>Drama Movie</h3>
+</div>
+
+</div>
+</section>
+
+<footer>
+<p>© 2026 MovieFlix. All Rights Reserved.</p>
+</footer>
+
 </body>
 </html>
+```
